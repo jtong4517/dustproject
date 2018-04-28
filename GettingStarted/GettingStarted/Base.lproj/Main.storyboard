@@ -57,20 +57,24 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PCj-3K-Ttg">
-                                <rect key="frame" x="16" y="619" width="343" height="29"/>
+                                <rect key="frame" x="16" y="620" width="343" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Home"/>
-                                    <segment title="Information"/>
-                                    <segment title="Overlays"/>
-                                    <segment title="News"/>
+                                    <segment title="Intro"/>
+                                    <segment title="Calculator"/>
+                                    <segment title="[empty]"/>
                                 </segments>
+                                <connections>
+                                    <action selector="BottomMenu:" destination="BYZ-38-t0r" eventType="valueChanged" id="Xhh-X0-dhy"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="BottomMenu" destination="PCj-3K-Ttg" id="oMZ-Gn-GBS"/>
                         <outlet property="button" destination="XJe-b1-wEA" id="MTz-Kk-qXq"/>
                         <outlet property="lightSwitch" destination="gti-FS-8g0" id="w4h-Dn-kli"/>
                     </connections>

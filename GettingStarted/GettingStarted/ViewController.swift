@@ -12,6 +12,7 @@ var lightOn = true, clicks = 0;
 class ViewController: UIViewController {
     @IBOutlet weak var lightSwitch: UISwitch!
     @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var BottomMenu: UISegmentedControl!
     
     @IBAction func lightSwitch(_ sender: Any) {
         view.backgroundColor = lightOn ? UIColor.black : UIColor.white;
@@ -22,6 +23,16 @@ class ViewController: UIViewController {
         clicks += 1;
         button.setTitle(String(clicks), for: .normal);
     }
+
+    /*
+    @IBAction func BottomMenu(_ sender: Any) {
+        switch BottomMenu.value() {
+            case "Intro":
+        
+            break;
+        }
+    }
+    */
     
     override func viewDidLoad() {
         super.viewDidLoad()

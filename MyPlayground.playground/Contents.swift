@@ -7,30 +7,31 @@
 //  CollectionLecture
 //
 
-import Foundation
+import UIKit
 
-func magicEightBall () -> String {
-    let randomNum = Int(arc4random_uniform(UInt32(5)));
-    
-    switch randomNum {
-    case 0:
-        return "definitely not";
-        
-    case 1:
-        return "most likely not";
-        
-    case 2:
-        return "possibly";
-        
-    case 3:
-        return "probably";
-        
-    case 4:
-        return "certainly";
-        
-    default:
-        return "this should not be happening";
+class Animal {
+    var hasFur: Bool;
+    var tail: Bool;
+    var feet: Int {
+        return 5;
+    };
+    init (hasFurProperty: Bool, numberOfFeet: Int) {
+        hasFur = hasFurProperty;
     }
-};
-//: page 1 of 6  |  [Next: App Exercise - A Functioning App](@next)
-print(magicEightBall());
+    func makeSound () {
+        
+    }
+}
+
+// TODO: Override parent variables
+// TODO 2: Display an image in the image view.
+// TODO 3: Override a parent initialization
+
+class Cat: Animal {
+    override var feet: Int {
+        get { return 4; }
+    }
+    override init (hasFurProperty: Bool, numberOfFeet: Int) {
+        
+    }
+}
