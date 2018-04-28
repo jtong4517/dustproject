@@ -7,26 +7,30 @@
 //  CollectionLecture
 //
 
-import UIKit
+import Foundation
 
-class Animal {
-    var hasFur: Bool
-    var feet: Int = 5;
-    init (hasFurProperty: Bool, numberOfFeet: Int) {
-        hasFur = hasFurProperty;
-        feet = numberOfFeet;
-    }
-    func makeSound () {
+func magicEightBall () -> String {
+    let randomNum = Int(arc4random_uniform(UInt32(5)));
+    
+    switch randomNum {
+    case 0:
+        return "definitely not";
         
+    case 1:
+        return "most likely not";
+        
+    case 2:
+        return "possibly";
+        
+    case 3:
+        return "probably";
+        
+    case 4:
+        return "certainly";
+        
+    default:
+        return "this should not be happening";
     }
-}
-
-// TODO: Override parent variables
-// TODO 2: Display an image in the image view.
-
-class Cat: Animal {
-    override var feet = 4;
-    override func makeSound() {
-        print("meow");
-    }
-}
+};
+//: page 1 of 6  |  [Next: App Exercise - A Functioning App](@next)
+print(magicEightBall());
