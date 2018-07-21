@@ -31,5 +31,5 @@ struct Book {
  Create a variable instance of `Book` called `favoriteBook` without supplying any arguments. Print out the title of `favoriteBook`. Does it currently reflect the title of your favorite book? Probably not. Change all four properties of `favoriteBook` to reflect your favorite book. Then using the properties of `favoriteBook`, print out facts about the book.
  */
 var favoriteBook = Book(title: "Wuthering Heights", author: "Emily Brontë", pages: 446, price: 0.99);
-print(favoriteBook.title);
+print("\(favoriteBook.title), a book by \(favoriteBook.author), is \(favoriteBook.pages) pages long and costs $\(favoriteBook.price).");
 //: page 1 of 10  |  [Next: App Exercise - Workout Tracking](@next)
